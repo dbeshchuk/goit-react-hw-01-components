@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .App-logo {
@@ -35,4 +38,60 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.friend-list {
+  list-style: none;
+
+  width: 424px;
+
+  display: flex;
+  border: 1px solid #dddddd;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.friend-list li {
+  margin-right: 50px;
+}
+
+.friend-list li::before {
+  content: "\2022";
+  font-size: xx-large;
+
+  line-height: 20px;
+  vertical-align: center;
+  display: inline-block;
+  width: 15px;
+  margin-left: -1em;
+}
+
+.friend-list li.offline::before {
+  color: red;
+}
+
+.friend-list li.online::before {
+  color: green;
+}
+
+.transaction-history {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+
+.transaction-history th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+
+.transaction-history td {
+  border: 1px solid #dddddd;
+  padding: 5px;
 }
